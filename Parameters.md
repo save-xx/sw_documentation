@@ -1,7 +1,7 @@
 ## Attributes and Methods
 
 
-[Simulator](Object_description/Simulator): Generate the core simulation
+[Simulator](Obj_Simulator): Generate the core simulation
 
 
 ### Agent
