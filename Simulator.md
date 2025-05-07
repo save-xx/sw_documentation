@@ -60,7 +60,7 @@ TIME_STEP = 1.0 / 30
 sim = Simulator(TIME_STEP)
 
 # Run 100 seconds of simulation
-for ist in range(30000):
+for ist in range(3000):
     # Print current time of simulation evey 300 ist (10 sec)
     if ist%300==0: print(f'{sim.time:.2f}')
     # advance the simulation foward of one TIME_STEP seconds
