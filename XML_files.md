@@ -89,9 +89,9 @@ Uniform constant current
 - `uniform_current` :2-Values defining the current component Direction North-East, value in m/s
 
 Localized current disturbances and noise
-- `noise_currents` :2-Values 
+- `noise_currents` :2-Values Frequency (Hz), and max Intensity (m/s) of the localized current affecting each agent. At a rate driven by the Frequency, a disturbance vector of magnitude 0 to Intensity (Random Uniform) and random direction is generated. At each instance the noise disturbance affecting an agent is the linear interpolation of the last and next disturbance vector over time.
 
-- `vortex_currents`
+- `vortex_currents`: 2-Values. Density and Intensity. Density is an **integer** determining the number of the vorticosity centers each 100 meter square, while intensity is the value intensity [m/s] associated to the votex. The effective modelling is explained in [link required].
 
 
 #### global_waves
