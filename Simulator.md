@@ -39,7 +39,7 @@ Generate a simulation instance
     - Agent1: Agent object (reciver)
     - Agent2: Agent object (sender)
       
-- **OWTT_acoustic_range (Agent1, Agent2)** -> *float*:return the distance vector of Agent2 respect to Agent1, considering acoustic delay, , including measurament errors and One way clock drift error.
+- **OWTT_acoustic_range (Agent1, Agent2)** -> *float*: return the distance vector of Agent2 respect to Agent1, considering acoustic delay, , including measurament errors and One way clock drift error.
     - Agent1, Agent object (reciver)
     - Agent2: Agent object (sender)
       
@@ -115,6 +115,8 @@ Contains a list of *dictionaries*, each defining a local wave. Each of such dict
 - `wavespeed`
 - `direction`
 - `shift`
+
+  
 Details on the Vaules contained under each key are explained in XML sim.
 
 
