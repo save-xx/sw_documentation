@@ -1,0 +1,74 @@
+# Create a new simulation
+
+Previous: [To install](installation)
+
+## Setup
+
+In order to create a new simulation is recommended to create a dedicated folder (separate from the installation folder, is installed from Source).
+
+For this example we will call it mysim
+
+```bash 
+mkdir mysim && cd mysim
+```
+
+Within the folder run the following shortcut:
+```bash
+SwarmSwIM create_new
+```
+
+Should output:
+```
+$ Initiated SwarmSwIM env templates in .
+```
+
+In windows or some python Env it ma be possible that the shortcut does not work, you can still refer to the script by running:
+
+```bash
+python3 -m SwarmSwIM.utility.cli create_new
+```
+
+Test by running the automatically created example:
+```bash
+python3 example.py
+```
+
+---
+
+## Create a new script
+We will ignore `example.py` and create a brand new script to run our simulation
+Create a new file `my_first_sim.py`
+
+```python
+# Import the Simulator
+from SwarmSwIM import Simulator
+
+PERIOD = 0.05 
+
+# Start a Simulator instance with a 0.05 s period
+S = Simulator(PERIOD)
+
+# Execute 100 simulation steps (5 seconds)
+for i in range(100):
+    # run a simulation step
+    events = S.tick()
+    # print step events
+    print(events)
+```
+
+This is the most basic simulation. 
+
+```python 
+S = Simulator(PERIOD)
+```
+Starts a new simulation object with a certain timestep (mandatory field). By default the `Simulator` will search for `simualtion.xml` in the script folder. the user can specify a specific `sim_xml` as a path (either relative or absolute) to specify a different xml file to be used. Details of the `Simulator` class are in [Simulator](Simulator).
+
+```python 
+events = S.tick()
+```
+
+Advances the simulation forward of one period. events is a dictionary collecting all plugins events. Currenty no plugin has been added, as such the event dictionary is empty.
+
+---
+
+Move to [Set a 2d Visualized](setVisualizer)
