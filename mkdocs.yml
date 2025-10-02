@@ -8,4 +8,9 @@ plugins:
 
 nav:
   - Home: Home.md
-  # Add other wiki pages here
+  - Getting Started: getting_started.md
+  - Parameters: Parameters.md
+  - Simulator: Simulator.md
+  - Agent: Agent.md
+  - CNN Detection: CNNDetection.md
+  - XML Files: XML_files.md
