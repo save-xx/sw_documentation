@@ -7,7 +7,7 @@ plugins:
   - mike
 
 nav:
-  - Home: Home.md
+  - Home: index.md
   - Detection: CNNDetection.md
   - Parameters: Parameters.md
   - Plugin: Plugin_template.md
