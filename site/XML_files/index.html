@@ -1,0 +1,956 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Simulator/">
+      
+      
+        <link rel="next" href="../agent/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>XML - SwarmSwIM Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setup-files" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SwarmSwIM Documentation" class="md-header__button md-logo" aria-label="SwarmSwIM Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SwarmSwIM Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              XML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SwarmSwIM Documentation" class="md-nav__button md-logo" aria-label="SwarmSwIM Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SwarmSwIM Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CNNDetection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin_template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Simulator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sim_agent-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      sim_agent description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="sim_agent description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inertia-and-drag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inertia and Drag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errornoises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error/Noises
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment_setup-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      environment_setup description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="environment_setup description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global_waves" class="md-nav__link">
+    <span class="md-ellipsis">
+      global_waves
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local_waves" class="md-nav__link">
+    <span class="md-ellipsis">
+      local_waves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agents-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      agents description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-and-use-of-randomness-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      seed and use of randomness pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create New
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setVisualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../set_simulation_xml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set simulaiont xml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agent-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agent Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sim_agent-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      sim_agent description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="sim_agent description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inertia-and-drag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inertia and Drag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#errornoises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error/Noises
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment_setup-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      environment_setup description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="environment_setup description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global_waves" class="md-nav__link">
+    <span class="md-ellipsis">
+      global_waves
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local_waves" class="md-nav__link">
+    <span class="md-ellipsis">
+      local_waves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agents-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      agents description
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seed-and-use-of-randomness-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      seed and use of randomness pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="setup-files">Setup Files</h1>
+<p>The simulators refers to 2 types of file for setting up the simulations. Thhose files contain all the paramenter and charateristics that allow to personalize each simulatation as needed. The files are written in XML format. 
+The philosofy is to allow the content of the file to coexisit whitin a standard URDF file, describing a specific robot  (agent) or simulation. Practical application of this principle is still ongoing. </p>
+<h2 id="agent-description">Agent Description</h2>
+<p>The agent description file defines the charateristics of a type of agent. It is worth nothing that multiple types can coexist in a simulation, and multiple instances of the same type are also allowed. The agent description file is defined either at the initialization of an <code>Agent</code> instance or within the Simulation description file. If not specified the default.xml description provvided in this package is used instead. </p>
+<p>The Agent Description file need to have the <code>.xml</code> termination and XML format. It is structured as follows: </p>
+<pre>
+agent.xml 
+└── data  
+    ├── sim_agent
+    └── sensors 
+        ├── NNDetector
+        └── Acoustic_Ranging
+</pre>
+
+<p><code>sim_agent</code> contains all the primary information regarding the agent, while <code>sensors</code> contains plug-in pecific charaterization parameters. It is worth noting that <code>sensor</code> can be populated even if those sensors are not imported in the simulation.</p>
+<h3 id="sim_agent-description"><code>sim_agent</code> description</h3>
+<p>The following parameters are tunable in the sim_agent section:</p>
+<h4 id="inertia-and-drag">Inertia and Drag</h4>
+<ul>
+<li><code>mass</code>: Dry mass of the agent in Kg</li>
+<li><code>added_mass</code>: 2x2 matrix of the added mass of the agent, referring to the [u,v] linear &amp; planar DoF (see Handbook of Marine Craft, Thor I. Fossen). Note that the convention used if for the diagonal element to be defined positive.</li>
+<li><code>quadratic_damping</code>, <code>linear_damping</code>: 2x2 matrixes referring to the linear and quatratic dumping due to hydrodynamic drag. Following the formula. 
+    <img alt="Equation" src="../drag.jpg" /><br />
+    Note that the convention used if for the diagonal element to be defined negative.</li>
+</ul>
+<h4 id="controls">Controls</h4>
+<p>Following the controls schemes that can be directly emulated and associated parameters. It is worth nothing that all parameters can be popoulated. The simulator will require the control specifi parameters to be defined. the control type can also be altered during the simulation, thus the associated parameters specified in the xml for the new type of control will be adapted.</p>
+<p><strong>Control - Depth</strong>
+- <code>depth_control</code>: type of control used. Options are "ideal", "step", "proportional", "heave"
+- <code>step_depth</code>: speed of ascend/descend in m/s when "step" is selected
+- <code>proportional_depth</code>: value of propotional control when "proportional" is selected. Input is depth error [m], output is heave velocity [m/s].
+- <code>heave_limit</code>: Upper-Lower limit of heave velocity [m/s], when "proportional" is selected.</p>
+<p><strong>Control - Heading</strong>
+- <code>heading_control</code>: type of control used. Options are "ideal", "step", "proportional", "yawrate"
+- <code>step_depth</code>: speed of rotation yawrate in degrees/s when "step" is selected
+- <code>proportional_depth</code>: value of propotional control when "proportional" is selected. Input is heading error [degrees], assuming shortest direction, output is yawrate velocity [degree/s].
+- <code>yawrate</code>: Upper-Lower limit of yawrate velocity [degree/s], when "proportional" is selected.</p>
+<p><strong>Control - Planar</strong>
+- <code>planar_control</code>: type of control used. Options are "ideal", "step", "local_velocity","inertial_velocity", "local_forces"
+- <code>step_planar</code>: planar speed in m/s when "step" is selected
+- <code>vel_limit</code>: 2-values, repesenting the surge and sway [u,v] velocity limit that the agent can reach. Applyed when "local_velocity" or "inertial_velocity" is selected.</p>
+<h4 id="errornoises">Error/Noises</h4>
+<p>Error and noises of the feedbacks expected in the control schemes can be emulated defining the error parameters. Such noises are modelled as gaussian noise and bias added to the ground truth value and then applied as input in the control scheme. A generic noise is defined as:
+- <code>e_&lt;input&gt;</code> = bias, standard deviation  </p>
+<p>The noises input that can be defined are:
+- <code>e_depth</code>
+- <code>e_heave</code>
+- <code>e_heading</code>
+- <code>e_yawrate</code>
+- <code>e_position</code>
+- <code>e_local_vel</code>
+- <code>e_inertial_vel</code>
+- <code>e_local_force</code></p>
+<p>The exception is <code>clock_drift</code> which is defined as the drift of the internal clock as PPM</p>
+<h2 id="simulation-description">Simulation Description</h2>
+<p>Each simulation is defined by a single simulation.xml file. The file is specified in the initialization of the <code>Simulation</code> class, and contains all the instructions to also initialize the agents. If not defined the simulation.xml file in this package is used as default.  </p>
+<p>The simulation description file need to have the <code>.xml</code> termination and XML format. It is structured as follows: </p>
+<pre>
+agent.xml 
+└── data  
+    ├── environment_setup
+    |   ├── global_waves
+    |   └── local_waves
+    ├── agents 
+    |   └── agent_type
+    └── seed
+</pre>
+
+<h3 id="environment_setup-description"><code>environment_setup</code> description</h3>
+<p>The <code>environment_setup</code> stores all data relative to current and current disturbances affecting the agents kinematics in the simulation.</p>
+<p>Uniform constant current
+- <code>uniform_current</code> :2-Values defining the current component Direction North-East, value in m/s</p>
+<p>Localized current disturbances and noise
+- <code>noise_currents</code> :2-Values Frequency (Hz), and max Intensity (m/s) of the localized current affecting each agent. At a rate driven by the Frequency, a disturbance vector of magnitude 0 to Intensity (Random Uniform) and random direction is generated. At each instance the noise disturbance affecting an agent is the linear interpolation of the last and next disturbance vector over time.</p>
+<ul>
+<li><code>vortex_currents</code>: 2-Values. Density and Intensity. Density is an <strong>integer</strong> determining the number of the vorticosity centers each 100 meter square, while intensity is the value intensity [m/s] associated to the votex. The effective modelling is explained in [link required].</li>
+</ul>
+<h4 id="global_waves">global_waves</h4>
+<p>Time dependand space independent sinusoidal wave-like disturbance. <code>global_waves</code> can contain a list of entries with arbitrary names. for conventions use <code>wave1</code>, <code>wave2</code> etc. Eack <code>wave</code> mush contain:</p>
+<ul>
+<li><code>amplitude</code>: Peak current intensity in m/s</li>
+<li><code>frequency</code>: Wave frequency, time based, expressed in Hz</li>
+<li><code>direction</code>: Direction in degrees of the current disturbance</li>
+<li><code>shift</code>: Offset on the wave timing, adimentional value between 0 and 2π</li>
+</ul>
+<h4 id="local_waves">local_waves</h4>
+<p>Time and space dependand sinusoidal wave-like disturbance. <code>local_waves</code> can contain a list of entries with arbitrary names. For conventions use <code>wave1</code>, <code>wave2</code> etc. Eack <code>wave</code> mush contain:</p>
+<ul>
+<li><code>amplitude</code>: Peak current intensity in m/s</li>
+<li><code>wavelength</code>: Distance between 2 peaks, in [m]</li>
+<li><code>wavespeed</code>: Wave velocity in m/s. (velocity of translation of the peaks)</li>
+<li><code>direction</code>: Direction in degrees of the current disturbance</li>
+<li><code>shift</code>: : Offset on the wave timing, adimentional value between 0 and 2π</li>
+</ul>
+<h3 id="agents-description"><code>agents</code> description</h3>
+<p>Section required to populate the simulation at initialization with agents. <code>agents</code> can contain a list of types, arbitrarelry named. For conventions use <code>agent_type</code>, <code>agent_type2</code> etc. Each <code>agent_type</code> must contain:</p>
+<ul>
+<li><code>description</code>: Path to agent xml. Either global or local path can be used.</li>
+<li><code>name</code>: Name prefix used by all agent of this type, inserted in this section. </li>
+<li><code>state</code>: 4xN matrix. The state is used to define the initial position of each agent.<ul>
+<li>1 line : position [x,y,z] in [m], heading in [degree]</li>
+<li>Each new line adds 1 extra Agent to the simulation</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example of state</strong></p>
+<pre><code class="language-xml">    &lt;state&gt;
+        &lt;!-- x, y, z, psi --&gt;
+        0.0  0.0  10.0  10.0
+        2.0  0.0  8.0  180.0
+    &lt;/state&gt;
+</code></pre>
+<p>2 Agents, Agent 1 placed on [0,0,10] heading 10 degree North, Agent 2 placed in [2,0,8] heading South. </p>
+<h3 id="seed-and-use-of-randomness-pipeline"><code>seed</code> and use of randomness pipeline</h3>
+<p>The seed value is an optional value. It is defined as an <strong>integer value</strong>. If not specified the random generator is reinitialized at each start of the simulation, which result on a different sequence of random values at each run.<br />
+If specified, then all random based event in the simulation will be tied to the seed value, and provvided no variation of the simulation parameters, will return consistent return at repeated runs. The seed is inherited from the simulation to the agents added in <code>agents</code>. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

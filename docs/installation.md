@@ -72,4 +72,4 @@ A windows should appear showcasing a 2D represntation
 
 ---
 
-You can now [create a new simulation](create_new) 
+You can now [create a new simulation](create_new.md) 

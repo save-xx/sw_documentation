@@ -1,0 +1,1101 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../XML_files/">
+      
+      
+        <link rel="next" href="../getting_started/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Agent - SwarmSwIM Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agent-class-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SwarmSwIM Documentation" class="md-header__button md-logo" aria-label="SwarmSwIM Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SwarmSwIM Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SwarmSwIM Documentation" class="md-nav__button md-logo" aria-label="SwarmSwIM Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SwarmSwIM Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Home/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CNNDetection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Detection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Parameters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Parameters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin_template/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Simulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Simulator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../XML_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Agent
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Cycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      tick()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Modes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Interfaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_forceheadingdepthforcenewtonnone-headingdegreesnone-depthmetersnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_ForceHeadingDepth(forceNewton=None, headingDegrees=None, depthMeters=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_positionheadingpositionmeters-headingdegreesnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_PositionHeading(positionMeters, headingDegrees=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_forcecmdforcenewton-enforcefalse" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_ForceCmd(forceNewton, enforce=False)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_velocitycmdvelocity-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_VelocityCmd(velocity, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_waypointcmdwaypoint-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_WaypointCmd(waypoint, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_headingheadingdegrees-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Heading(headingDegrees, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_yawrateyawrate-enforcefalse" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Yawrate(yawrate, enforce=False)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_depthdepthmeters-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Depth(depthMeters, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_heaveheave-enforcefalse" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Heave(heave, enforce=False)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noise Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create_new/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create New
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setVisualizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../set_simulation_xml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Set simulaiont xml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initialization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simulation-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulation Cycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simulation Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tick" class="md-nav__link">
+    <span class="md-ellipsis">
+      tick()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Control Modes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Interfaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set_forceheadingdepthforcenewtonnone-headingdegreesnone-depthmetersnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_ForceHeadingDepth(forceNewton=None, headingDegrees=None, depthMeters=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_positionheadingpositionmeters-headingdegreesnone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_PositionHeading(positionMeters, headingDegrees=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_forcecmdforcenewton-enforcefalse" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_ForceCmd(forceNewton, enforce=False)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_velocitycmdvelocity-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_VelocityCmd(velocity, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_waypointcmdwaypoint-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_WaypointCmd(waypoint, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_headingheadingdegrees-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Heading(headingDegrees, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_yawrateyawrate-enforcefalse" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Yawrate(yawrate, enforce=False)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_depthdepthmeters-modenone" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Depth(depthMeters, mode=None)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set_heaveheave-enforcefalse" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_Heave(heave, enforce=False)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Noise Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="agent-class-documentation">Agent Class Documentation</h1>
+<p>The Agent class models an underwater autonomous agent with configurable dynamics, control schemes, and noise effects.<br />
+It supports heading, depth, and planar motion control, with options for direct force, velocity, and waypoint commands. 
+Initialization of the various instances of <code>Agent</code> are autonmatically created and initializated from the <code>Simulator</code> class. It is however possible to create independent instances and add the to the simulation with the <code>Simulator.add</code> method.</p>
+<p>The core use of the class, from the user perspective, are the Command Interfaces described below. see <a href="#command-interfaces">Command Interfaces</a></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<ul>
+<li>Each agent is uniquely identified by its name.</li>
+<li>The class loads physical and control parameters from an XML configuration file.</li>
+<li>It simulates the sensor feedback, directely invloved in the payload, with optional noise.</li>
+<li>The internally processed sensors feedback are, with respect of the control scheme adopted: depth, heave speed, heading, yawrate, position, velocity, thruster force output. </li>
+<li>Multiple control schemes are available for heading, depth, and planar motion.</li>
+<li>Commands can be issued in terms of forces, velocities, positions, heading, depth, or yawrate.</li>
+</ul>
+<hr />
+<h2 id="initialization">Initialization</h2>
+<pre><code class="language-python">Agent(
+    name: str,
+    initialPosition: array-like = [0.0, 0.0, 0.0],
+    initialHeading: float = 0.0,
+    agent_xml: str = &quot;default.xml&quot;,
+    rng: int | None = None
+)
+</code></pre>
+<p>Parameters:</p>
+<ul>
+<li>name (str): Unique identifier for the agent.</li>
+<li>initialPosition (list | tuple | np.ndarray, size 3): Initial [x, y, z] position. Defaults to [0, 0, 0].</li>
+<li>initialHeading (float): Initial heading in degrees (0 = North, positive clockwise). Defaults to 0.0.</li>
+<li>agent_xml (str): XML file defining agent parameters. Defaults to "default.xml".</li>
+<li>rng (int | None): Random seed for measurement noise. If not given, an unseeded RNG is used.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-python">from SwarmSwIM import Agent
+A1 = Agent(name=&quot;A1&quot;, initialPosition=[0, 0, -5], initialHeading=90.0, agent_xml = &quot;myagent.xml&quot;)
+</code></pre>
+<hr />
+<h2 id="key-attributes">Key Attributes</h2>
+<ul>
+<li>pos (np.ndarray): Current 3D position [x, y, z].</li>
+<li>psi (float): Current heading (degrees).</li>
+<li>yawrate (float): Current yawrate (deg/s).</li>
+<li>measured_depth, measured_heading, measured_pos: Noisy sensor measurements.</li>
+<li>cmd_depth, cmd_heading, cmd_planar, cmd_local_vel, cmd_forces: Current control commands.</li>
+<li>planar_control, heading_control, depth_control: Control modes loaded from XML or set via commands.</li>
+<li>massMatrix, linear_damping, quadratic_damping: Dynamic parameters.</li>
+</ul>
+<hr />
+<h2 id="simulation-cycle">Simulation Cycle</h2>
+<h3 id="tick">tick()</h3>
+<p>Advances the agent state by one simulation step:</p>
+<ol>
+<li>Updates sensor feedback with noise.</li>
+<li>Updates heading.</li>
+<li>Updates depth.</li>
+<li>Updates planar motion.</li>
+</ol>
+<p>Example:</p>
+<hr />
+<h2 id="control-modes">Control Modes</h2>
+<p>Depth Control:</p>
+<ul>
+<li>ideal: Instant correction.</li>
+<li>step: Incremental correction with fixed step size (constant speed, no overshoot). </li>
+<li>proportional: Proportional controller with threshold limits.</li>
+<li>heave: Direct controlled vertical velocity.</li>
+</ul>
+<p>Heading Control:</p>
+<ul>
+<li>ideal: Instant correction.</li>
+<li>step: Incremental correction with step size. (constant yaw rate, no overshoot)</li>
+<li>proportional: Pure Proportional controller with limit.</li>
+<li>yawrate: Direct yawrate control.</li>
+</ul>
+<p>Planar Control:</p>
+<ul>
+<li>ideal: Instant correction.</li>
+<li>step: Incremental waypoint tracking. Assumes constant planar translation. Unaffected by agent heading.</li>
+<li>local_velocity: Body-frame velocity commands, velocity compared to the surronding waterflow (The actual velocity is then affected by the additional translation of the currents, use this mode if the velocity contrlo is based on flow sensors or purerly model based).</li>
+<li>inertial_velocity: Body-frame velocity commands with current compensation. Makes best effort to mantain the velocity indicated, with respect to an inertial reference frame. Whithin the limits indicated fully compensaates for currents. Use when emulating feedback based on DLV or INS.</li>
+<li>local_forces: Force-based dynamics with damping and added mass. USe input as Body-frame force vector</li>
+</ul>
+<hr />
+<h2 id="command-interfaces">Command Interfaces</h2>
+<h3 id="set_forceheadingdepthforcenewtonnone-headingdegreesnone-depthmetersnone">set_ForceHeadingDepth(forceNewton=None, headingDegrees=None, depthMeters=None)</h3>
+<p>Control planar force, heading, and depth simultaneously.</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_ForceHeadingDepth(forceNewton=[5., 0.], headingDegrees=45, depthMeters=10)
+</code></pre>
+<hr />
+<h3 id="set_positionheadingpositionmeters-headingdegreesnone">set_PositionHeading(positionMeters, headingDegrees=None)</h3>
+<p>Move to a target position with optional heading.
+If positionMeters has 3 values, depth is updated as well.</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_PositionHeading([10., 5.], headingDegrees=90)
+</code></pre>
+<hr />
+<h3 id="set_forcecmdforcenewton-enforcefalse">set_ForceCmd(forceNewton, enforce=False)</h3>
+<p>Direct force command in body frame.
+If enforce=True, sets planar_control = "local_forces".</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_ForceCmd([2., 0.], enforce=True)
+</code></pre>
+<hr />
+<h3 id="set_velocitycmdvelocity-modenone">set_VelocityCmd(velocity, mode=None)</h3>
+<p>Velocity command in body frame.
+mode can be "local_velocity" or "inertial_velocity".</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_VelocityCmd([1., 0.], mode=&quot;local_velocity&quot;)
+</code></pre>
+<hr />
+<h3 id="set_waypointcmdwaypoint-modenone">set_WaypointCmd(waypoint, mode=None)</h3>
+<p>Waypoint command for planar position.
+mode can be "ideal" or "step".</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_WaypointCmd([5., 5.], mode=&quot;step&quot;)
+</code></pre>
+<hr />
+<h3 id="set_headingheadingdegrees-modenone">set_Heading(headingDegrees, mode=None)</h3>
+<p>Heading command. Set desired heading in Degrees (NED)
+mode can be "ideal", "step", or "proportional".</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_Heading(180., mode=&quot;proportional&quot;)
+</code></pre>
+<hr />
+<h3 id="set_yawrateyawrate-enforcefalse">set_Yawrate(yawrate, enforce=False)</h3>
+<p>Yawrate command. Set desired Yawrate in Degrees/second (NED)
+If enforce=True, sets heading_control = "yawrate".</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_Yawrate(10., enforce=True)
+</code></pre>
+<hr />
+<h3 id="set_depthdepthmeters-modenone">set_Depth(depthMeters, mode=None)</h3>
+<p>Depth command. Depth in meters, positive is down (NED)
+mode can be "ideal", "step", or "proportional".</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_Depth(20., mode=&quot;step&quot;)
+</code></pre>
+<hr />
+<h3 id="set_heaveheave-enforcefalse">set_Heave(heave, enforce=False)</h3>
+<p>Heave (vertical velocity) command. Heave in meters/seconds, positive is down (NED)
+If enforce=True, sets depth_control = "heave".</p>
+<p>Example:</p>
+<pre><code class="language-python">A1.set_Heave(0.5, enforce=True)
+</code></pre>
+<hr />
+<h2 id="noise-simulation">Noise Simulation</h2>
+<ul>
+<li>Each measurement can be affected by Gaussian noise.</li>
+<li>Noise parameters (e_depth, e_heading, e_position, etc.) are loaded from the XML.</li>
+<li>Errors are applied via emulate_error(value, error).</li>
+</ul>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>The XML configuration file defines dynamics, damping, control parameters, and noise models.</li>
+<li>Depth is positive downwards (NED convention).</li>
+<li>Heading follows NED convention (0° = North, increasing clockwise).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

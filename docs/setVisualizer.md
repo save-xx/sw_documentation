@@ -1,6 +1,6 @@
 # Setting a Visualize 2D simualtion
 
-In [create new](create_new) we have seen how to set a basic simulation.
+In [create new](create_new.md) we have seen how to set a basic simulation.
 
 The basic setting has no visual interface, nor it runs in real time, which doen not allow for human interpretation.
 For this reason SwarmSwIM offers a 2D Visualizer plugin. The example.py is an implementation of the visualizer. 
@@ -138,4 +138,4 @@ For yourself: try changeing background color in `bg_color`, set the legent to `"
 
 ---
 
-Next, how to [set your simulation envrioment](set_simulation_xml)
+Next, how to [set your simulation envrioment](set_simulation_xml.md)

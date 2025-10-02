@@ -1,6 +1,6 @@
 # Create a new simulation
 
-Previous: [To install](installation)
+Previous: [To install](installation.md)
 
 ## Setup
 
@@ -65,7 +65,7 @@ This is the most basic simulation.
 ```python 
 S = Simulator(PERIOD)
 ```
-Starts a new simulation object with a certain timestep (mandatory field). By default the `Simulator` will search for `simualtion.xml` in the script folder. the user can specify a specific `sim_xml` as a path (either relative or absolute) to specify a different xml file to be used. Details of the `Simulator` class are in [Simulator](Simulator).
+Starts a new simulation object with a certain timestep (mandatory field). By default the `Simulator` will search for `simualtion.xml` in the script folder. the user can specify a specific `sim_xml` as a path (either relative or absolute) to specify a different xml file to be used. Details of the `Simulator` class are in [Simulator](Simulator.md).
 
 We created a function called `cycle` that contains all the actions happening in a single simulation step.
 
@@ -87,7 +87,7 @@ The result is that we are printing an empty dictionary at each step, as the is n
 
 ---
 
-Let's print somenthing more useful: in this simulation the agents are named `A01` and `A02`, the naming can be controlled in the [simulator xml](XML_files), later explained.
+Let's print somenthing more useful: in this simulation the agents are named `A01` and `A02`, the naming can be controlled in the [simulator xml](XML_files.md), later explained.
 
 To output the position of `A01` lets change the print to:
 ```python
@@ -103,4 +103,4 @@ Those are the x, y, z position of `A01` at each step.
 
 ---
 
-In the next page, how to [Set a 2d Visualized](setVisualizer)
+In the next page, how to [Set a 2d Visualized](setVisualizer.md)

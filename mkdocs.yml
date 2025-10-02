@@ -8,4 +8,14 @@ plugins:
 
 nav:
   - Home: Home.md
-  # Add other wiki pages here
+  - Detection: CNNDetection.md
+  - Parameters: Parameters.md
+  - Plugin: Plugin_template.md
+  - Simulator: Simulator.md
+  - XML: XML_files.md
+  - Agent: agent.md
+  - Getting Started: getting_started.md
+  - Installation: installation.md
+  - Create New: create_new.md
+  - Set Visualizer: setVisualizer.md
+  - Set simulaiont xml: set_simulation_xml.md
