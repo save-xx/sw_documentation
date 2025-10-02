@@ -7,7 +7,7 @@ plugins:
   - mike
 
 nav:
-  - Home: Home.md
+  - Home: index.md
   - Getting Started: getting_started.md
   - Parameters: Parameters.md
   - Simulator: Simulator.md
