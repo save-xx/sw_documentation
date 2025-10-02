@@ -19,3 +19,5 @@ nav:
   - Create New: create_new.md
   - Set Visualizer: setVisualizer.md
   - Set simulaiont xml: set_simulation_xml.md
+
+docs_dir: docs
