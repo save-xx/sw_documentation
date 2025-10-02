@@ -1,0 +1,11 @@
+site_name: SwarmSwIM Documentation
+theme:
+  name: material
+
+plugins:
+  - search
+  - mike
+
+nav:
+  - Home: Home.md
+  # Add other wiki pages here
