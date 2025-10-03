@@ -1,12 +1,16 @@
 site_name: SwarmSwIM Documentation
+
 theme:
   name: material
+  # optional nice-to-have features
   features:
-    - version
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
 
 plugins:
   - search
-  - mike
+  # DO NOT list 'mike' here for RTD builds (RTD handles versions)
 
 nav:
   - Home: index.md
