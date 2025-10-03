@@ -1,6 +1,8 @@
 site_name: SwarmSwIM Documentation
 theme:
   name: material
+  features:
+    - version
 
 plugins:
   - search
