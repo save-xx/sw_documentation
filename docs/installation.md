@@ -5,7 +5,7 @@
 SwarmSwIM is a standard python package. For users that are not interested in adding or modifuing the code, it is suggested to install it as:
 
 ```bash
-git clone https://github.com/save-xx/SwarmSwIM.git
+pip install git+https://github.com/save-xx/SwarmSwIM.git@dev-0.4.0
 ```
 
 This will install SwarmSwIM in your standard packages folder, which should be in your pythonpath. 
@@ -17,7 +17,7 @@ import SwarmSwIM
 
 ## Developer installation (Install from Source)
 
-In order to have direct access to the codebase, set modifications, add or develop additional plugins it is necessary to setup a developer installation. 
+To modify the codebase or develop additional plugins, you should install SwarmSwIM in editable mode.
 To install from source, create a folder where to save the source files, then clone the repository.
 
 ```bash
@@ -25,23 +25,28 @@ mkdir swsw_dev && cd swsw_dev
 git clone https://github.com/save-xx/SwarmSwIM.git
 ```
 
-Enter the SwarmSwIM folder and use pip to install it in editable mode
+Enter the SwarmSwIM folder and switch to the development branch:
 ```bash
 cd SwarmSwIM/
+git fetch origin
+git switch dev-0.4.0
+```
+
+Finally, install the package in editable mode:
+```bash
 pip install -e .
 ```
 
-To run an isolated python vistual envrioment (using venv):
+### Developer installation with VENV
+It is good practice to run the package in an isolated environment using venv. 
+In this setup, the virtual environment can be created in any location (not necessarily inside the project folder).
 
 ```bash
-# 1. Create your project folder and enter it
-mkdir swsw_dev && cd swsw_dev
-
-# 2. Clone the repo
-git clone https://github.com/save-xx/SwarmSwIM.git
+# enter your development forder where SwarmSwIM is located
+cd swsw_dev/SwarmSwIM
 
 # 3. Create a virtual environment named "swsw"
-python3 -m venv swsw
+python3 -m venv ~/<your_path>/swsw
 ```
 
 Activate the virtual envrioment
@@ -54,10 +59,21 @@ source swsw/bin/activate
 swsw\Scripts\Activate.ps1
 ```
 
-Enter the cloned folder and Install SwarmSwIM in editable mode inside the swsw venv
+Install SwarmSwIM in editable mode
+Make sure the virtual environment is activated, then install the package:
+
+From the SwarmSwIM folder
 ```bash
-cd SwarmSwIM/
 pip install -e .
+```
+
+Check the correct installation:
+
+Exit the SwarmSwim folder and run the following for another folder:
+
+```bash
+cd ~
+python -c "import SwarmSwIM"
 ```
 
 ## Quick test installation
@@ -65,7 +81,7 @@ To test all the system installed and works correctly, run the example script
 From terminal
 
 ```bash
-python3 -m SwarmSwIM.example
+python -m SwarmSwIM.example
 ```
 
 A windows should appear showcasing a 2D represntation
