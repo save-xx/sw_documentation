@@ -1,106 +1,51 @@
-# Create a new simulation
+# Create a New Simulation
 
-Previous: [To install](installation.md)
+Previous: [Installation](installation.md)
 
 ## Setup
 
-In order to create a new simulation is recommended to create a dedicated folder (separate from the installation folder, is installed from Source).
+It is recommended to create each simulation in its own dedicated folder, separate from the SwarmSwIM installation directory (if installed from source).
 
-For this example we will call it mysim
+For this example, create a folder called `mysim`:
 
 ```bash 
 mkdir mysim && cd mysim
 ```
 
-Within the folder run the following shortcut:
+If SwarmSwIM was installed inside a virtual environment, make sure the environment is activated first. See [Activate the vitural envrioment](installation.md#activate-the-virtual-envrioment).
+
+Generate a new simulation project using:
+
 ```bash
 SwarmSwIM create_new
 ```
 
-Should output:
+You should see:
+
 ```
 $ Initiated SwarmSwIM env templates in .
 ```
 
-In windows or some python Env it ma be possible that the shortcut does not work, you can still refer to the script by running:
+On some systems, particularly Windows or certain Python environments, the `SwarmSwIM` command may not be available in the terminal.
+
+In that case, you can invoke the CLI directly through Python:
 
 ```bash
-python3 -m SwarmSwIM.utility.cli create_new
+python -m SwarmSwIM.utility.cli create_new
 ```
 
-Test by running the automatically created example:
+## Run the Example
+
+The project generator creates a ready-to-run example script. Test your installation by running:
+
 ```bash
-python3 example.py
+python example.py
 ```
+
+If everything is configured correctly, the simulator and visualizer should start.
 
 ---
 
-## Create a new script
-We will ignore `example.py` and create a brand new script to run our simulation
-Create a new file `my_first_sim.py`
+Learn how the generated example works: [Analyze the `example.py` script](analyze_example.md).
 
-```python
-# Import the Simulator
-from SwarmSwIM import Simulator
-
-PERIOD = 0.05 
-
-# Start a Simulator instance with a 0.05 s period
-S = Simulator(PERIOD)
-
-# define function describing all actions in a simulation step
-def cycle():
-    # run a simulation step
-    events = S.tick()
-    # print step events
-    print(events)
-
-# Execute 100 simulation steps (5 seconds)
-for i in range(100):
-    cycle()
-```
-
-This is the most basic simulation. 
-
-```python 
-S = Simulator(PERIOD)
-```
-Starts a new simulation object with a certain timestep (mandatory field). By default the `Simulator` will search for `simualtion.xml` in the script folder. the user can specify a specific `sim_xml` as a path (either relative or absolute) to specify a different xml file to be used. Details of the `Simulator` class are in [Simulator](Simulator.md).
-
-We created a function called `cycle` that contains all the actions happening in a single simulation step.
-
-```python 
-events = S.tick()
-print(events)
-```
-
-Advances the simulation forward of one period. events is a dictionary collecting all plugins events. Currenty no plugin has been added, as such the event dictionary is empty.
-
-Finally we run the simulation for 100 steps:
-
-```python 
-for i in range(100):
-    cycle()
-```
-
-The result is that we are printing an empty dictionary at each step, as the is no plugin event.
-
----
-
-Let's print somenthing more useful: in this simulation the agents are named `A01` and `A02`, the naming can be controlled in the [simulator xml](XML_files.md), later explained.
-
-To output the position of `A01` lets change the print to:
-```python
-print(S['A01'].pos)
-```
-
-We will now see a series of 3-elements arrays:
-```
-[0. 0. 1.]
-```
-
-Those are the x, y, z position of `A01` at each step.
-
----
-
-In the next page, how to [Set a 2d Visualized](setVisualizer.md)
+Continue the tutorial: [Create a new simulation script](write_new_script.md).

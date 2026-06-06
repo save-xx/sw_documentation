@@ -46,10 +46,10 @@ In this setup, the virtual environment can be created in any location (not neces
 cd swsw_dev/SwarmSwIM
 
 # 3. Create a virtual environment named "swsw"
-python3 -m venv ~/<your_path>/swsw
+python -m venv ~/<your_path>/swsw
 ```
 
-Activate the virtual envrioment
+### Activate the virtual envrioment 
 + On Linux / macOS:
 ```bash
 source swsw/bin/activate
